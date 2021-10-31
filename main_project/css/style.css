@@ -11,3 +11,14 @@ body {
     height: 5px;
     margin: 0 auto;
 }
+
+.height-80 {
+    min-height: 80vh;
+}
+
+.about-picture {
+    background: url("https://cdn.pixabay.com/photo/2016/03/09/09/17/desktop-1245714_960_720.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
