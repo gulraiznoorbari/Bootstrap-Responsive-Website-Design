@@ -56,6 +56,47 @@ body .btn-1:hover {
     background-color: var(--main-color);
 }
 
+body .btn-2 {
+    background-color: var(--main-color);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    box-shadow: var(--shadow-100);
+    font-weight: 500;
+}
+
+body .btn-2:focus {
+    box-shadow: var(--shadow-100);
+}
+
+body .btn-2:hover {
+    color: var(--main-color);
+    background-color: white;
+}
+
+body .owl-carousel .owl-dots {
+    padding: 0 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+body .owl-carousel button.owl-dot {
+    height: 5px;
+    width: 24px;
+    background-color: #dddddd;
+    display: inline-block;
+    margin: 0 4px;
+    border-radius: 5px;
+}
+
+body .owl-carousel button.owl-dot.active {
+    background-color: var(--main-color);
+}
+
 img {
     max-width: 100%;
     vertical-align: middle;
@@ -453,25 +494,6 @@ ul {
     margin: 0 0 15px;
 }
 
-.features .owl-carousel .owl-dots {
-    padding: 0 15px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.features .owl-carousel button.owl-dot {
-    height: 5px;
-    width: 24px;
-    background-color: #dddddd;
-    display: inline-block;
-    margin: 0 4px;
-    border-radius: 5px;
-}
-
-.features .owl-carousel button.owl-dot.active {
-    background-color: var(--main-color);
-}
-
 /* Fun Facts */
 .fun-facts {
     background-color: var(--black-100);
@@ -540,3 +562,71 @@ ul {
 }
 
 /* App Screenshots */
+
+.screenshot-item {
+    margin: 15px;
+}
+
+.screenshot-item img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 250px;
+}
+
+/* App Download */
+
+.app-download {
+    background-image: url(./images/download-app-bg.jpg);
+    background-position: center top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+.app-download .section-title h2 {
+    color: #ffffff;
+}
+
+.app-download::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--main-to-dark-color);
+    opacity: 0.8;
+}
+
+.app-download-item {
+    background-color: var(--black-000);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: var(--shadow-100);
+}
+
+.app-download-item i {
+    font-size: 30px;
+    color: var(--main-color);
+    display: inline-block;
+}
+
+.app-download-item h3 {
+    font-size: 22px;
+    color: var(--black-900);
+    margin: 20px 0;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.app-download-item p {
+    font-size: 16px;
+    color: var(--black-400);
+    font-weight: 300;
+    margin: 0 0 30px;
+    line-height: 26px;
+}
