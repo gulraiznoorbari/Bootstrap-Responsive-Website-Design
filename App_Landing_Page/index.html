@@ -24,36 +24,36 @@
     </head>
     <body>
         <!-- navbar start-->
-        <nav class="navbar navbar-expand-md fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="index.html">app</a>
+                <a class="navbar-brand" href="index.html">app name</a>
                 <button
                     class="navbar-toggler"
                     type="button"
                     data-toggle="collapse"
                     data-target="#collapsibleNavbar"
                 >
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">home</a>
+                            <a class="nav-link active" data-scroll-nav="0" href="#">home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">features</a>
+                            <a class="nav-link" data-scroll-nav="1" href="#">features</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">screenshots</a>
+                            <a class="nav-link" data-scroll-nav="2" href="#">screenshots</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">testimonials</a>
+                            <a class="nav-link" data-scroll-nav="4" href="#">testimonials</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">pricing</a>
+                            <a class="nav-link" data-scroll-nav="5" href="#">pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">contact</a>
+                            <a class="nav-link" data-scroll-nav="6" href="#">contact</a>
                         </li>
                     </ul>
                 </div>
@@ -62,7 +62,7 @@
         <!-- navbar end-->
 
         <!-- home section start -->
-        <section class="home d-flex align-items-center">
+        <section class="home d-flex align-items-center" data-scroll-index="0" id="home">
             <div class="effect-wrap">
                 <i class="fas fa-plus effect effect1"></i>
                 <i class="fas fa-plus effect effect2"></i>
@@ -78,7 +78,7 @@
                                 aperiam porro tempora voluptatibus facere?
                             </p>
                             <div class="home-btn">
-                                <a href="#" class="btn btn-1">download app</a>
+                                <a href="#" class="btn btn-1" data-scroll-goto="3">download app</a>
                                 <button type="button" class="btn btn-1 video-play-btn">
                                     <i class="fas fa-play"></i>
                                 </button>
@@ -115,7 +115,7 @@
         <!-- Video Popup end -->
 
         <!-- Features Section start -->
-        <section class="features section-padding">
+        <section class="features section-padding" data-scroll-index="1" id="features">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -219,7 +219,7 @@
         <!-- Fun Facts Section end -->
 
         <!-- App Screenshots Section start -->
-        <section class="app-screenshots section-padding">
+        <section class="app-screenshots section-padding" data-scroll-index="2" id="screenshots">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -252,7 +252,7 @@
         <!-- App Screenshots Section end -->
 
         <!-- App Download Section start -->
-        <section class="app-download section-padding">
+        <section class="app-download section-padding" data-scroll-index="3">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -357,7 +357,7 @@
         <!-- How it works Section end -->
 
         <!-- Testimonial Section start -->
-        <section class="testimonials section-padding">
+        <section class="testimonials section-padding" data-scroll-index="4" id="testimonials">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -451,7 +451,7 @@
         <!-- Testimonial Section end -->
 
         <!-- Pricing Section start -->
-        <section class="pricing section-padding">
+        <section class="pricing section-padding" data-scroll-index="5" id="pricing">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -673,7 +673,7 @@
         <!-- Frequently Asked Questions (FAQs) section end-->
 
         <!-- Contact section start -->
-        <section class="contact section-padding">
+        <section class="contact section-padding" data-scroll-index="6">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -682,13 +682,160 @@
                         </div>
                     </div>
                 </div>
-                <div class="row"></div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-5">
+                        <div class="contact-info">
+                            <h3>For Any Queries and Support</h3>
+                            <div class="contact-info-item">
+                                <i class="fas fa-location-arrow"></i>
+                                <h4>Company Location</h4>
+                                <p>ABC, XYZ, New York</p>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="fas fa-envelope"></i>
+                                <h4>Write to us at</h4>
+                                <p>info@gmail.com</p>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="fas fa-phone"></i>
+                                <h4>Call us on</h4>
+                                <p>123 456 789</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-7">
+                        <div class="contact-form">
+                            <form>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input
+                                                type="text"
+                                                placeholder="Your Name"
+                                                class="form-control"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input
+                                                type="text"
+                                                placeholder="Your Email"
+                                                class="form-control"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <input
+                                                type="text"
+                                                placeholder="Your Phone"
+                                                class="form-control"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <input
+                                                type="text"
+                                                placeholder="Subject"
+                                                class="form-control"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <textarea
+                                                type="text"
+                                                placeholder="Your Message"
+                                                class="form-control"
+                                            ></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-2">
+                                                Send Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- Contact section end -->
 
+        <!-- Footer section start -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-col">
+                            <h3>About us</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, nemo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-col">
+                            <h3>Company</h3>
+                            <ul>
+                                <li><a href="#">privacy policy</a></li>
+                                <li><a href="#">terms & conditions</a></li>
+                                <li><a href="#">latest blogs</a></li>
+                                <li><a href="#">app services</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-col">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="#home">home</a></li>
+                                <li><a href="#features">features</a></li>
+                                <li><a href="#screenshots">screenshots</a></li>
+                                <li><a href="#pricing">pricing</a></li>
+                                <li><a href="#testimonials">testimonials</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-col">
+                            <h3>Social Pages</h3>
+                            <ul>
+                                <li><a href="#">facebook</a></li>
+                                <li><a href="#">twitter</a></li>
+                                <li><a href="#">instagram</a></li>
+                                <li><a href="#">linkedin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="copyright">&copy;2021 @ App Name</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer section end -->
+
         <!-- Custom JS -->
-        <script src="main.js"></script>
+        <script src="./js/main.js"></script>
+        <!-- Scroll-It JS -->
+        <script src="./js/scrollIt.min.js"></script>
         <!-- Bootstrap and Popper JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
