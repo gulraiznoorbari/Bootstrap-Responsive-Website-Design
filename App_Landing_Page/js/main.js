@@ -1,3 +1,8 @@
+$(window).on("load", function () {
+    /* Preloader */
+    $(".preloader").fadeOut("slow");
+});
+
 $(document).ready(function () {
     /* Navbar Shrink */
     $(window).on("scroll", function () {
@@ -97,4 +102,34 @@ $(document).ready(function () {
     $(".nav-link").on("click", function () {
         $(".navbar-collapse").collapse("hide");
     });
+    /* Theme Toggler */
+    function toggleTheme() {
+        if (localStorage.getItem("theme") !== null) {
+            if (localStorage.getItem("theme") === "dark") {
+                $("body").addClass("dark");
+            } else {
+                $("body").removeClass("dark");
+            }
+        }
+        updateIcon();
+    }
+    toggleTheme();
+    $(".toggle-theme").on("click", function () {
+        $("body").toggleClass("dark");
+        if ($("body").hasClass("dark")) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+        updateIcon();
+    });
+    function updateIcon() {
+        if ($("body").hasClass("dark")) {
+            $(".toggle-theme i").removeClass("fa-moon");
+            $(".toggle-theme i").addClass("fa-sun");
+        } else {
+            $(".toggle-theme i").removeClass("fa-sun");
+            $(".toggle-theme i").addClass("fa-moon");
+        }
+    }
 });
